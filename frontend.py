@@ -6,7 +6,7 @@ import pandas as pd
 import re
 
 # --- Configuration ---
-FLASK_API_URL = "http://127.0.0.1:5000/predict"
+FLASK_API_URL = "https://omr-evaluation-app.onrender.com/predict"
 
 # --- Page Setup ---
 st.set_page_config(
