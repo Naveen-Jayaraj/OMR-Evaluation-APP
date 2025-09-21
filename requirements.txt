@@ -1,0 +1,9 @@
+streamlit
+requests
+pandas
+openpyxl
+flask
+numpy
+opencv-python
+ultralytics
+gunicorn
