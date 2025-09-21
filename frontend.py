@@ -6,13 +6,20 @@ import pandas as pd
 import re
 
 # --- Configuration ---
-FLASK_API_URL = "https://omr-evaluation-app.onrender.com/predict"
+FLASK_API_URL = "https://hihihihihihihihiha-omr-backend-api.hf.space/predict"
 
 # --- Page Setup ---
 st.set_page_config(
     page_title="OMR Grading Application",
     layout="wide"
 )
+
+# --- Centered Header ---
+st.markdown("""
+    <h1 style='text-align: center;'>OMR Grader</h1>
+    <p style='text-align: center;'>This tool automates the grading of OMR sheets by comparing them against a provided answer key.</p>
+    <hr>
+""", unsafe_allow_html=True)
 
 # --- Helper Function (No changes needed) ---
 def parse_answer_key(uploaded_file):
@@ -50,9 +57,7 @@ def parse_answer_key(uploaded_file):
         return None, None
 
 # --- Main Application UI ---
-st.title("OMR Grading Application")
-st.markdown("This tool automates the grading of OMR sheets by comparing them against a provided answer key.")
-st.markdown("---")
+# Removed the original title and markdown since we added them above with centering
 
 # --- File Upload Section ---
 col1, col2 = st.columns(2)
@@ -153,12 +158,43 @@ else:
 # --- About Section ---
 st.markdown("---")
 st.subheader("About the Developers")
+
+# Add CSS for the box styling
+st.markdown("""
+<style>
+.developer-box {
+    background-color: #f0f2f6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    border-left: 5px solid #4e8cff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.developer-name {
+    font-weight: bold;
+    color: #1f3a60;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.developer-desc {
+    color: #566573;
+    font-size: 16px;
+}
+</style>
+""", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("**Naveen Jayaraj**")
-    st.markdown("B.Tech CSE with AIML, 3rd Year")
-    st.link_button("LinkedIn Profile", "https://www.linkedin.com/")
+    st.markdown("""
+    <div class="developer-box">
+        <div class="developer-name">Naveen Jayaraj</div>
+        <div class="developer-desc">B.Tech CSE with AIML, 3rd Year</div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
-    st.markdown("**Shreya Ravi K**")
-    st.markdown("B.Tech CSE, 3rd Year")
-    st.link_button("LinkedIn Profile", "https://www.linkedin.com/")
+    st.markdown("""
+    <div class="developer-box">
+        <div class="developer-name">Shreya Ravi K</div>
+        <div class="developer-desc">B.Tech CSE, 3rd Year</div>
+    </div>
+    """, unsafe_allow_html=True)
