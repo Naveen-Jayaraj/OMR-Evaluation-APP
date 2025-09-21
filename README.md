@@ -144,7 +144,7 @@ This project was developed by:
   * **Naveen Jayaraj**
 
       * B.Tech CSE with AIML, 3rd Year
-      * [LinkedIn Profile](https://www.linkedin.com/)
+      * [LinkedIn Profile](https://www.linkedin.com/in/naveen-jayaraj/)
 
   * **Shreya Ravi K**
 
